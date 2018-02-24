@@ -31,6 +31,7 @@ import app.com.proyectoapiyoutube.interfaces.OnItemClickListener;
 import app.com.proyectoapiyoutube.models.YoutubeDataModel;
 import app.com.proyectoapiyoutube.R;
 
+
 public class ChannelFragment extends Fragment {
     private static String GOOGLE_YOUTUBE_API_KEY = "AIzaSyAdDix7i7a3an-gyXiquTV_14cIsr8-DZg";//here you should use your api key for testing purpose you can use this api also
     private static String CHANNEL_ID = "UCctzFpNKMq6PQVargRgSSTg"; //here you should use your channel id for testing purpose you can use this api also

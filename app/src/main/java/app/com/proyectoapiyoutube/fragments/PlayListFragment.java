@@ -31,11 +31,8 @@ import app.com.proyectoapiyoutube.models.YoutubeDataModel;
 import app.com.proyectoapiyoutube.R;
 import app.com.proyectoapiyoutube.adapters.VideoPostAdapter;
 
-/**
- * A simple {@link Fragment} subclass.
- */
-public class PlayListFragment extends Fragment {
 
+public class PlayListFragment extends Fragment {
     private static String GOOGLE_YOUTUBE_API_KEY = "AIzaSyAdDix7i7a3an-gyXiquTV_14cIsr8-DZg";//here you should use your api key for testing purpose you can use this api also
     private static String PLAYLIST_ID = "LLctzFpNKMq6PQVargRgSSTg";//here you should use your playlist id for testing purpose you can use this api also
     private static String CHANNEL_GET_URL = "https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=" + PLAYLIST_ID + "&maxResults=50&key=" + GOOGLE_YOUTUBE_API_KEY + "";

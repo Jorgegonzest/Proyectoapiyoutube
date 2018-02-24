@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("app.com.youtubeapiv3", appContext.getPackageName());
+        assertEquals("app.com.proyectoapiyoutube", appContext.getPackageName());
     }
 }
