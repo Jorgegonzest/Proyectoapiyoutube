@@ -41,9 +41,9 @@ import java.net.URL;
 import java.net.URLConnection;
 import java.util.ArrayList;
 
-import app.com.proyectoapiyoutube.models.YoutubeDataModel;
 import app.com.proyectoapiyoutube.adapters.CommentAdapter;
 import app.com.proyectoapiyoutube.models.YoutubeCommentModel;
+import app.com.proyectoapiyoutube.models.YoutubeDataModel;
 import at.huber.youtubeExtractor.YouTubeUriExtractor;
 import at.huber.youtubeExtractor.YtFile;
 
@@ -200,10 +200,10 @@ public class DetailsActivity extends YouTubeBaseActivity implements YouTubePlaye
         // this is the text that will be shared
         sendIntent.putExtra(Intent.EXTRA_TEXT, link);
         sendIntent.putExtra(Intent.EXTRA_SUBJECT, youtubeDataModel.getTitle()
-                + "Share");
+                + "Compartir");
 
         sendIntent.setType("text/plain");
-        startActivity(Intent.createChooser(sendIntent, "share"));
+        startActivity(Intent.createChooser(sendIntent, "Compartir"));
     }
 
     public void downloadVideo(View view) {
@@ -216,7 +216,7 @@ public class DetailsActivity extends YouTubeBaseActivity implements YouTubePlaye
                     int itag = 22;
                     //This is the download URL
                     String downloadURL = ytFiles.get(itag).getUrl();
-                    Log.e("download URL :", downloadURL);
+                    Log.e("descargar URL :", downloadURL);
 
                     //now download it like a file
                     new RequestDownloadVideoStream().execute(downloadURL, videoTitle);
@@ -239,7 +239,7 @@ public class DetailsActivity extends YouTubeBaseActivity implements YouTubePlaye
         protected void onPreExecute() {
             super.onPreExecute();
             pDialog = new ProgressDialog(DetailsActivity.this);
-            pDialog.setMessage("Downloading file. Please wait...");
+            pDialog.setMessage("Descargando video. Por favor espere...");
             pDialog.setIndeterminate(false);
             pDialog.setMax(100);
             pDialog.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);
@@ -263,7 +263,7 @@ public class DetailsActivity extends YouTubeBaseActivity implements YouTubePlaye
 
                 if (huc != null) {
                     String file_name = params[1] + ".mp4";
-                    String storagePath = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS)+"/YoutubeVideos";
+                    String storagePath = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS)+"/Descargas";
                     File f = new File(storagePath);
                     if (!f.exists()) {
                         f.mkdir();
@@ -354,7 +354,7 @@ public class DetailsActivity extends YouTubeBaseActivity implements YouTubePlaye
             if (response != null) {
                 try {
                     JSONObject jsonObject = new JSONObject(response);
-                    Log.e("response", jsonObject.toString());
+                    Log.e("respuesta", jsonObject.toString());
                     mListData = parseJson(jsonObject);
                     initVideoList(mListData);
                 } catch (JSONException e) {

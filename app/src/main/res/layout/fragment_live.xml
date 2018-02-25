@@ -2,7 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="app.com.proyectoapiyoutube.app.com.proyectoapiyoutube.fragments.LiveFragment">
+    tools:context="app.com.proyectoapiyoutube.fragments.LiveFragment">
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/mList_videos"

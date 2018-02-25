@@ -4,6 +4,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <TextView
+        android:id="@+id/textView_Descripcion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/textView_Descripcion"
+        android:layout_alignLeft="@+id/textViewDes"
+        android:layout_alignStart="@+id/textViewDes"
+        android:layout_below="@+id/title_layout"/>
+
     <com.google.android.youtube.player.YouTubePlayerView
         android:id="@+id/youtube_player"
         android:layout_height="170dp"
@@ -70,12 +79,13 @@
         android:visibility="visible" />
 
     <TextView
-        android:layout_below="@+id/title_layout"
         android:id="@+id/textViewDes"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/linearLayout"
+        android:layout_alignStart="@+id/linearLayout"
+        android:layout_below="@+id/textView_Descripcion"
         android:layout_gravity="left"
-        android:layout_margin="10dp"
         android:maxLines="4"
         android:text="Descripcion"
         android:textAppearance="?android:attr/textAppearanceLarge"
@@ -91,7 +101,8 @@
         android:layout_marginBottom="10dp"
 
         android:orientation="vertical"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayout">
 
         <TextView
             android:visibility="gone"
@@ -113,4 +124,5 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"></android.support.v7.widget.RecyclerView>
     </LinearLayout>
+
 </RelativeLayout>

@@ -2,7 +2,7 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 25
-    buildToolsVersion "25.0.2"
+    buildToolsVersion '26.0.2'
     defaultConfig {
         applicationId 'com.example.jorge.proyecto'
         minSdkVersion 15
@@ -37,6 +37,7 @@ dependencies {
     compile 'com.android.support:support-v4:25.3.1'
     compile 'com.squareup.okhttp:okhttp:2.3.0'
     compile 'org.jbundle.util.osgi.wrapped:org.jbundle.util.osgi.wrapped.org.apache.http.client:4.1.2'
+
     //for image show
     compile 'com.squareup.picasso:picasso:2.5.2'
     compile 'com.github.HaarigerHarald:android-youtubeExtractor:master-SNAPSHOT'
